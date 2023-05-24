@@ -1,0 +1,22 @@
+@mixin tab {
+  @media screen and (max-width: 1100px) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media screen and (max-width: 640px) {
+    @content;
+  }
+}
+
+html {
+  font-size: 10px;
+}
+
+  body {
+    font-size: 0.1rem;
+  }
+  html {
+    font-size: calc(100vw / 3.75);
+  }

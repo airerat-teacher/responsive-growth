@@ -1,0 +1,340 @@
+@charset "UTF-8";
+
+@import './resert.scss';
+@import './mixin.scss';
+
+/* common */
+
+img {
+  vertical-align: middle;
+}
+
+a {
+  text-decoration:none;
+}
+
+.inner {
+  color: #333;
+  margin: 0 auto;
+  width: 1100px;
+  @include tab {
+    width: 100%;
+  }
+}
+
+.btn {
+  color: #ffffff;
+  background-color: #6ba7eb;
+  font-size: 12px;
+  padding: 12px 14px;
+  text-decoration: none;
+  transition: all 0.3s;
+  &:hover {
+    color: #333;
+  }
+}
+
+.centering {
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 50px;
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  text-align: center;
+}
+
+.is {
+  &__flex {
+    display: flex;
+  }
+  &__b__flex {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+/* common */
+
+/* header */
+.header {
+  padding: 15px 0px;
+  position: fixed;
+  width: 100%;
+  background: #e6b4b4;
+  z-index: 9999;
+  &__nav {
+    font-size: 16px;
+    @include tab {
+      padding: 0 4%;
+    }
+  }
+}
+
+.nav {
+  &__brand {
+    padding-top: 5px;
+    align-items: center;
+    cursor: pointer;
+    float: left;
+    color: #777;
+  }
+
+  &__list {
+    cursor: pointer;
+    font-weight: 700;
+    @include tab {
+      display: none;
+    }
+    & li{
+      padding: 0 50px;
+      position: relative;
+    }
+    & a {
+      color: #777;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+/* ハンバーガーメニュー */
+.humberger {
+  padding: 10px;
+  position: relative;
+  height: 40px;
+  width: 50px;
+  display: inline-block;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: none;
+  &__child {
+    position: absolute;
+    left: 11px;
+    height: 3px;
+    width: 26px;
+    background: #ddd;
+    border-radius: 2px;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+  &__child:nth-of-type(1) {
+    top: 7px;
+  }
+  &__child:nth-of-type(2) {
+    top: 17px;
+  }
+  &__child:nth-of-type(3) {
+    bottom: 7px;
+  }
+  @include tab {
+    display: block;
+  }
+  @include sp {
+    display: block;
+  }
+}
+/* header */
+
+/* keyvisual */
+.keyvisual {
+  padding: 83px 0 0 0;
+  background: url("../img/keyvisual-pc.jpg") no-repeat center/cover;
+  &__content {
+    color: #fff;
+    text-align: center;
+    padding: 256.875px 0 151.23625px 0;
+    @include tab {
+      font-size: 0.1171rem;
+      padding: 38.75px 0 31px 0;
+      }
+    &__subtitle {
+      font-size: 35px;
+      line-height: 1.75;
+      letter-spacing: 0.015rem;
+      @include tab {
+        font-size: 0.1171rem;
+      }
+    }
+    &__title {
+      font-size: 63.73px;
+      line-height: 1.75;
+      letter-spacing: 0.015rem;
+      @include tab {
+        font-size: 0.176rem;
+      }
+    }
+  }
+}
+/* keyvisual */
+
+/* work */
+.work {
+  &__content {
+    padding: 100.75px 0 35px 0 ;
+    @include tab {
+      padding: 35.375px 0 40px 0 ;
+    }
+    &__title {
+      font-size: 48px;
+      line-height: 1.75;
+      text-align: center;
+      @include tab {
+        font-size: 0.211rem;
+      }
+    }
+    & hr {
+      width: 726px;
+      margin-top: 36px;
+      margin-bottom: 0;
+      border-top: 1px solid #960c13;
+      @include tab {
+        margin-top: 6.5px;
+        width: 58%;
+      }
+    }
+  }
+  &__col {
+    @include tab {
+      flex-direction: column-reverse;
+    }
+    &__unit {
+      width: 505px;
+      @include tab {
+        width: 100%;
+      }
+    }
+    &__caption {
+      width: 595px;
+      position: relative;
+      margin:70px 0 0 0;
+      @include tab {
+        width: 100%;
+        margin: 45px 0 0 0;
+      }
+    }
+    &__lpimg {
+      @include tab {
+        display: none;
+      }
+    }
+    &__spimg {
+      display: none;
+      @include tab {
+        display: block;
+        margin: 0 auto;
+        width: 65.31%;
+        height: auto;
+      }
+    }
+    &__captionbox {
+      background: #f0caca;
+      width: 21.4556%;
+      height: 47.31%;
+      position: absolute;
+      bottom: 56px;
+      right: 0;
+      z-index: -1;
+      @include tab {
+        top: -22px;
+        bottom: 0px;
+        right: 10.5%;
+      }
+    }
+    &__text {
+      padding: 20.215px 7.48% 24.895px;
+      margin: 50px 33px 0 0;
+      background: #f0caca;
+      position: relative;
+      :nth-child(1)::after {
+        background-color: #e4b0b0;
+        position: absolute;
+        z-index: 9;
+        width: 60px;
+        height: 36px;
+        bottom: 0;
+        left: 0;
+        content: "";
+      }
+      @include tab {
+        margin: 40px 18% 0;
+        :nth-child(1)::after {
+          background-color: #e4b0b0;
+          position: absolute;
+          z-index: 9;
+          width: 7.57%;
+          height: 61.43%;
+          bottom: 0;
+          left: 0;
+          content: "";
+        }
+      }
+    }
+    &__title {
+      font-size: 36.76px;
+      line-height: 1.75;
+      @include tab {
+        font-size: 0.176rem;
+      }
+    }
+    &__subtext {
+      font-size: 24.28px;
+      line-height: 1.75;
+      margin: 15.11px 0 0 0;
+      @include tab {
+        font-size: 0.106rem;
+      }
+    }
+    &__box {
+      background: #f0caca;
+      width: 26.3%;
+      height: 75.76%;
+      position: absolute;
+      top: 172px;
+      right: 412px;
+      z-index: -1;
+      @include tab {
+        top: 39%;
+        right: 92.4%;
+      }
+    }
+    &__description {
+      font-size: 21.11px;
+      line-height: 1.75;
+      margin: 20.08375px 0 0 0;
+      padding: 0 49px;
+      @include tab {
+        margin: 30.25px 0 0 0;
+        font-size: 0.106rem;
+        padding: 0 21%;
+      }
+    }
+  }
+  &__button{
+    text-align: center;
+    &__text {
+      margin: 27px 0  0;
+      padding: 18px 29.75px;
+      background: linear-gradient(to right, #e68db4, #e4b0b0);
+      box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
+      border-radius: 40px;
+      display: inline-block;
+      color: #fff;
+      font-size: 17.45px;
+      line-height: 1.75;
+      text-decoration: none;
+      white-space: nowrap;
+      @include tab {
+        margin: 26.25px 0 0;
+        padding: 14.25px 20.75px;
+        font-size: 0.141rem;
+      }
+    }
+  }
+}
+/* work */
